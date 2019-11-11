@@ -4,13 +4,13 @@
       %p.ChatSide__header__box__username NAME
       %ul.ChatSide__header__box__menu
         %li.ChatSide__header__box__menu__newgroup
-          %a{:href => "#"}
+          =link_to "#", class: " " do
             %i.fa.fa-edit
         %li.ChatSide__header__box__menu__edituser
-          %a{:href => "#"}
+          =link_to "#", class: " " do
             %i.fa.fa-cog
   .ChatSide__groups
-    %a{:href => "#"}
+    =link_to "#", class: " " do
       .ChatSide__groups__group
         %p.ChatSide__groups__group__groupname testのグループ
         %p.ChatSide__groups__group__latestmessage まだメッセージがありません
