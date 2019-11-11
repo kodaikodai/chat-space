@@ -1,0 +1,22 @@
+.ChatSide
+  .ChatSide__header
+    .ChatSide__header__box
+      %p.ChatSide__header__box__username NAME
+      %ul.ChatSide__header__box__menu
+        %li.ChatSide__header__box__menu__newgroup
+          =link_to "#", class: " " do
+            %i.fa.fa-edit
+        %li.ChatSide__header__box__menu__edituser
+          =link_to "#", class: " " do
+            %i.fa.fa-cog
+  .ChatSide__groups
+    =link_to "#", class: " " do
+      .ChatSide__groups__group
+        %p.ChatSide__groups__group__groupname testのグループ
+        %p.ChatSide__groups__group__latestmessage まだメッセージがありません
+
+
+
+
+
+    
