@@ -15,15 +15,12 @@
         %p.ChatMain__messages__message__upper-info__talker 田中
         %p.ChatMain__messages__message__upper-info__date 2019/11/09(Sat) 13:41:19
       %p.ChatMain__messages__message__text 田中です
-  
-  .ChatMain__form
-    %form#new_message.ChatMain__form__new_message{"#": "UTF-8", action: "#", enctype: "#", method: "#"}
-      %input{name: "utf8", type: "hidden", value: "✓"}/
-      %input{name: "authenticity_token", type: "hidden", value: "#"}/
-      .ChatMain__form__new_message__input-box
-        %input#message_content.ChatMain__form__new_message__input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
-        %label.ChatMain__form__new_message__input-box__image{for: "message_image"}
-          %i.fa.fa-image
-          %input#message_image.ChatMain__form__new_message__input-box__image__file{name: "message[image]", type: "file"}/
-      %input.ChatMain__form__submit-btn{"#": "Send", name: "commit", type: "submit", value: "Send"}/
 
+  .ChatMain__form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'ChatMain__form__new_message__input-box__text', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'ChatMain__form__new_message__input-box__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'ChatMain__form__submit-btn'
