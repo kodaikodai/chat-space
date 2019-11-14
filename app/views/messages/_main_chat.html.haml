@@ -10,11 +10,7 @@
       .ChatMain__header__edit-btn Edit
 
   .ChatMain__messages
-    .ChatMain__messages__message                      
-      .ChatMain__messages__message__upper-info
-        %p.ChatMain__messages__message__upper-info__talker 田中
-        %p.ChatMain__messages__message__upper-info__date 2019/11/09(Sat) 13:41:19
-      %p.ChatMain__messages__message__text 田中です
+    = render @messages
 
   .ChatMain__form
       = form_for [@group, @message] do |f|
