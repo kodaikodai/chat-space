@@ -1,7 +1,9 @@
 .ChatMain__messages__message                      
   .ChatMain__messages__message__upper-info
-    %p.ChatMain__messages__message__upper-info__talker = message.user.name
-    %p.ChatMain__messages__message__upper-info__date = message.created_at.strftime("%Y/%m/%d %H:%M")
+    %p.ChatMain__messages__message__upper-info__talker
+      = message.user.name
+    %p.ChatMain__messages__message__upper-info__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
   .ChatMain__messages__message__text 
     - if message.content.present?
       %p.ChatMain__messages__message__text__content

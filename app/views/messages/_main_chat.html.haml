@@ -1,11 +1,11 @@
 .ChatMain
   .ChatMain__header
     .ChatMain__header__left-box
-      %h2.ChatMain__header__left-box__current-group
+      %h2.ChatMain__header__left-box__current-group 
         = @group.name
-      %ul.ChatMain__header__left-box__member-list
+      %ul.ChatMain__header__left-box__member-list 
         - @group.users.each do |user|
-          Member: 
+          Member:
           = user.name
         %li.ChatMain__header__left-box__member-list__member
     =link_to edit_group_path(current_user.id),class: " " do
@@ -14,13 +14,12 @@
   .ChatMain__messages
     = render partial: 'messages/message', collection: @messages
 
-  .ChatMain__form
-    %form#new_message.ChatMain__form__new_message{"#": "UTF-8", action: "#", enctype: "#", method: "#"}
-      %input{name: "utf8", type: "hidden", value: "✓"}/
-      %input{name: "authenticity_token", type: "hidden", value: "#"}/
-      .ChatMain__form__new_message__input-box
-        %input#message_content.ChatMain__form__new_message__input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
-        %label.ChatMain__form__new_message__input-box__image{for: "message_image"}
-          %i.fa.fa-image
-          %input#message_image.ChatMain__form__new_message__input-box__image__file{name: "message[image]", type: "file"}/
-      %input.ChatMain__form__submit-btn{"#": "Send", name: "commit", type: "submit", value: "Send"}/
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
