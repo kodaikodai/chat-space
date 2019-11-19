@@ -1,44 +1,28 @@
 $(function(){
   function buildHTML(message){
-    if ( message.image ) {
-      var html =
-        `<div class="ChatMain__messages__message" data-message-id=${message.id}>
-          <div class="ChatMain__messages__message__upper-info">
-            <p class="ChatMain__messages__message__upper-info__talker">
-              ${message.user_name}
-            </p>
-            <p class="ChatMain__messages__message__upper-info__date">
-              ${message.date}
-            </p>
-          </div>
-          <div class="ChatMain__messages__message__text">
-            <p class="ChatMain__messages__message__text__content">
-              ${message.content}
-            </p>
-            <img class="ChatMain__messages__message__text__image" src=${message.image}>
-          </div>
-        </div>`
-      return html;
-    } else {
-      var html =
-        `<div class="ChatMain__messages__message" data-message-id=${message.id}>
-          <div class="ChatMain__messages__message__upper-info">
-            <p class="ChatMain__messages__message__upper-info__talker">
-              ${message.user_name}
-            </p>
-            <p class="ChatMain__messages__message__upper-info__date">
-              ${message.date}
-            </p>
-          </div>
-          <div class="ChatMain__messages__message__text">
-            <p class="ChatMain__messages__message__text__content">
-              ${message.content}
-            </p>
-          </div>
-        </div>`
-      return html;
-      };
-    }
+    var addImage = (message.image !== null) ? `<img class="ChatMain__messages__message__text__image" src=${message.image}>` : '' 
+    var html =
+    `<div class="ChatMain__messages__message" data-message-id=${message.id}>
+      <div class="ChatMain__messages__message__upper-info">
+        <p class="ChatMain__messages__message__upper-info__talker">
+          ${message.user_name}
+        </p>
+        <p class="ChatMain__messages__message__upper-info__date">
+          ${message.date}
+        </p>
+      </div>
+      <div class="ChatMain__messages__message__text">
+        <p class="ChatMain__messages__message__text__content">
+          ${message.content}
+        </p>
+          ${addImage}
+      </div>
+    </div>`
+
+    return html
+  }
+
+ 
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
