@@ -16,7 +16,8 @@
 プログラミングスクールTECH::EXPERTのカリキュラム内の課題にて作成いたしました。
 
 ## URL
-http://18.177.99.139/ 
+http://18.177.99.139 <br>
+テスト用アカウント（Email:test@test.com Password:tttttttttt）
 
 ## 主な機能
 
