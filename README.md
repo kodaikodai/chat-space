@@ -33,6 +33,9 @@ http://18.177.99.139 <br>
 ### メッセージ投稿機能
 [![Image from Gyazo](https://i.gyazo.com/691d3a36aad92121fbdabf3dbd8251ad.gif)](https://gyazo.com/691d3a36aad92121fbdabf3dbd8251ad)
 
+## DB設計
+<img width="458" alt="スクリーンショット 2020-02-09 22 51 47" src="https://user-images.githubusercontent.com/57389471/74103373-f10fb880-4b8e-11ea-8a62-31f4121ef95a.png">
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
