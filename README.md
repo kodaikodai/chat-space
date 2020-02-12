@@ -17,7 +17,10 @@
 
 ## URL
 http://18.177.99.139 <br>
-テスト用アカウント（Email:test@test.com Password:tttttttttt）
+テスト用アカウント↓↓
+- Email&nbsp;:&nbsp;test@test.<span>com</span>
+- Password&nbsp;:&nbsp;tttttttttt
+
 
 ## 主な機能
 
