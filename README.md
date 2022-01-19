@@ -1,4 +1,4 @@
-<h2 align="center"><a href="http://18.177.99.139/">ChatSpace</a></h2>
+<h2 align="center">ChatSpace</h2>
 
 [![Image from Gyazo](https://i.gyazo.com/691d3a36aad92121fbdabf3dbd8251ad.gif)](https://gyazo.com/691d3a36aad92121fbdabf3dbd8251ad)
 
@@ -14,13 +14,6 @@
 
 ## このアプリについて
 プログラミングスクールTECH::EXPERTのカリキュラム内の課題にて作成いたしました。
-
-## URL
-http://18.177.99.139 <br>
-テスト用アカウント↓↓
-- Email&nbsp;:&nbsp;test@test.<span>com</span>
-- Password&nbsp;:&nbsp;tttttttttt
-
 
 ## 主な機能
 
